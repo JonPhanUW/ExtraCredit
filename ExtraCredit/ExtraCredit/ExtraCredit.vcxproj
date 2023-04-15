@@ -17,6 +17,14 @@
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="StaticallyLoadedShapes|Win32">
+      <Configuration>StaticallyLoadedShapes</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="StaticallyLoadedShapes|x64">
+      <Configuration>StaticallyLoadedShapes</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -52,6 +60,12 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='StaticallyLoadedShapes|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='StaticallyLoadedShapes|x64'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -70,19 +84,31 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticallyLoadedShapes|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticallyLoadedShapes|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Shapes\src;$(SolutionDir)UnitTest\src;$(SolutionDir)DerivedShapes;$(SolutionDir)Shapes\x64\Debug;$(SolutionDir)DerivedShapes\x64\Debug</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Shapes\src;$(SolutionDir)UnitTest\src;$(SolutionDir)DerivedShapes;$(SolutionDir)Shapes\x64\Debug;$(SolutionDir)DerivedShapes\x64\Debug;$(SolutionDir)DerivedShapes\x64\StaticallyLoadedShapes;#(SolutionDir)ExtraCredit\x64\StaticallyLoadedShapes</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>%(AdditionalDependencies);</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\DerivedShapes\x64\Debug;..\..\Shapes\x64\Debug;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\DerivedShapes\x64\Debug;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\Shapes\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);DerivedShapes.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\DerivedShapes\x64\StaticallyLoadedShapes;..\..\Shapes\x64\StaticallyLoadedShapes;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\DerivedShapes\x64\Debug;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\Shapes\x64\Debug;D:\UW\ExtraCredit\ExtraCredit\x64\StaticallyLoadedShapes;D:\UW\ExtraCredit\ExtraCredit\DerivedShapes\x64\StaticallyLoadedShapes;$(SolutionDir)ExtraCredit\x64\StaticallyLoadedShapes;$(SolutionDir)ExtraCredit\DerivedShapes\x64\StaticallyLoadedShapes;$(SolutionDir)x64\StaticallyLoadedShapes;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -108,8 +134,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>%(AdditionalDependencies);</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\DerivedShapes\x64\Debug;..\..\Shapes\x64\Debug;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\DerivedShapes\x64\Debug;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\Shapes\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>DerivedShapes.lib;DerivedShapes.dll;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\DerivedShapes\x64\Debug;..\..\Shapes\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -122,17 +148,17 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Shapes\src;$(SolutionDir)UnitTest\src;$(SolutionDir)DerivedShapes;$(SolutionDir)Shapes\x64\Debug;$(SolutionDir)DerivedShapes\x64\Debug</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Shapes\src;$(SolutionDir)UnitTest\src;$(SolutionDir)DerivedShapes;$(SolutionDir)Shapes\x64\Debug;$(SolutionDir)DerivedShapes\x64\Debug;$(SolutionDir)DerivedShapes\x64\StaticallyLoadedShapes;#(SolutionDir)ExtraCredit\x64\StaticallyLoadedShapes</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>%(AdditionalDependencies);</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\DerivedShapes\x64\Debug;..\..\Shapes\x64\Debug;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\DerivedShapes\x64\Debug;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\Shapes\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);DerivedShapes.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\DerivedShapes\x64\StaticallyLoadedShapes;..\..\Shapes\x64\StaticallyLoadedShapes;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\DerivedShapes\x64\Debug;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\Shapes\x64\Debug;D:\UW\ExtraCredit\ExtraCredit\x64\StaticallyLoadedShapes;D:\UW\ExtraCredit\ExtraCredit\DerivedShapes\x64\StaticallyLoadedShapes;$(SolutionDir)ExtraCredit\x64\StaticallyLoadedShapes;$(SolutionDir)ExtraCredit\DerivedShapes\x64\StaticallyLoadedShapes;$(SolutionDir)x64\StaticallyLoadedShapes;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -158,8 +184,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>%(AdditionalDependencies);</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\DerivedShapes\x64\Debug;..\..\Shapes\x64\Debug;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\DerivedShapes\x64\Debug;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\Shapes\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>DerivedShapes.lib;DerivedShapes.dll;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\DerivedShapes\x64\Debug;..\..\Shapes\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -169,6 +195,24 @@
       <Command>
       </Command>
     </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='StaticallyLoadedShapes|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Shapes\src;$(SolutionDir)UnitTest\src;$(SolutionDir)DerivedShapes;$(SolutionDir)Shapes\x64\Debug;$(SolutionDir)DerivedShapes\x64\Debug;D:\UW\ExtraCredit\ExtraCredit\ExtraCredit\x64\StaticallyLoadedShapes;D:\UW\ExtraCredit\ExtraCredit\DerivedShapes\x64\StaticallyLoadedShapes</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\..\DerivedShapes\x64\Debug;..\..\Shapes\x64\Debug;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\DerivedShapes\x64\Debug;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\Shapes\x64\Debug;$(SolutionDir)ExtraCredit\x64\StaticallyLoadedShapes;D:\UW\ExtraCredit\ExtraCredit\x64\StaticallyLoadedShapes;$(SolutionDir)x64\StaticallyLoadedShapes;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>DerivedShapes.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='StaticallyLoadedShapes|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Shapes\src;$(SolutionDir)UnitTest\src;$(SolutionDir)DerivedShapes;$(SolutionDir)Shapes\x64\Debug;$(SolutionDir)DerivedShapes\x64\Debug;D:\UW\ExtraCredit\ExtraCredit\ExtraCredit\x64\StaticallyLoadedShapes;D:\UW\ExtraCredit\ExtraCredit\DerivedShapes\x64\StaticallyLoadedShapes</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\..\DerivedShapes\x64\Debug;..\..\Shapes\x64\Debug;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\DerivedShapes\x64\Debug;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\Shapes\x64\Debug;$(SolutionDir)ExtraCredit\x64\StaticallyLoadedShapes;D:\UW\ExtraCredit\ExtraCredit\x64\StaticallyLoadedShapes;$(SolutionDir)x64\StaticallyLoadedShapes;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>DerivedShapes.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\ColorTest.cpp" />

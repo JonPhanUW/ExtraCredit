@@ -1,0 +1,8 @@
+﻿  ColorTest.cpp
+  DerivedShapesTest.cpp
+  Main.cpp
+  Generating Code...
+DerivedShapesTest.obj : error LNK2019: unresolved external symbol __imp_generateRedRectangle referenced in function "public: virtual void __cdecl verifyRedColortest01Test::runTest(class TestResult &)" (?runTest@verifyRedColortest01Test@@UEAAXAEAVTestResult@@@Z)
+DerivedShapesTest.obj : error LNK2019: unresolved external symbol __imp_generateBlueRectangle referenced in function "public: virtual void __cdecl verifyBlueColortest02Test::runTest(class TestResult &)" (?runTest@verifyBlueColortest02Test@@UEAAXAEAVTestResult@@@Z)
+DerivedShapesTest.obj : error LNK2019: unresolved external symbol __imp_MeaningOfLife referenced in function "public: virtual void __cdecl testMeaningOfLifetest03Test::runTest(class TestResult &)" (?runTest@testMeaningOfLifetest03Test@@UEAAXAEAVTestResult@@@Z)
+D:\UW\ExtraCredit\ExtraCredit\x64\StaticallyLoadedShapes\ExtraCredit.exe : fatal error LNK1120: 3 unresolved externals

@@ -6,9 +6,12 @@
 #include "TestHarness.h"
 #include "ProjectCode_API.h"
 #include"DerivedShapes.h"
+#include <windows.h> 
+#include <stdio.h> 
 //#include "../../DIIA/DerivedShapes/DerivedShapes.h"
 //#include "../../DIIB/DerivedShapes/DerivedShapes.h"
 
+typedef int(__cdecl* MYPROC)(LPCWSTR);
 
 int main()
 {
@@ -33,34 +36,36 @@ int main()
 	char test; 
 	std::cin >> test; 
 
-	
+	//HINSTANCE dsLib;
+	//MYPROC ProcAdd;
+	//BOOL fFreeResult, fRunTimeLinkSuccess = FALSE;
+
+	//// Get a handle to the DLL module.
+
+	//dsLib = LoadLibrary(TEXT("DerivedShape.dll"));
+
+	//// If the handle is valid, try to get the function address.
+
+	//if (dsLib != NULL)
+	//{
+	//	ProcAdd = (MYPROC)GetProcAddress(dsLib, "DerivedShape");
+
+	//	// If the function address is valid, call the function.
+
+	//	if (NULL != ProcAdd)
+	//	{
+	//		fRunTimeLinkSuccess = TRUE;
+	//		(ProcAdd)(L"Message sent to the DLL function\n");
+	//	}
+	//	// Free the DLL module.
+
+	//	fFreeResult = FreeLibrary(dsLib);
+	//}
+
+	//// If unable to call the DLL function, use an alternative.
+	//if (!fRunTimeLinkSuccess)
+	//	printf("Message printed from executable\n");
+
 
 }
 
-
-
-
-
-
-//===== Run - time dynamic linking =====
-
-//Investigate run - time dynamic linking OS API functions :
-//
-//Windows: investigate
-//LoadLibrary(https ://learn.microsoft.com/en-us/windows/win32/dlls/using-run-time-dynamic-linking 
-//
-//
-//	GetProcAddress(GetProcAddress function(libloaderapi.h) - Win32 apps | Microsoft Learn
-//		
-//Create a RuntimeLinkedShapes(.exe) that asks the user whether to load the "red" or "blue" DerivedShapes.dll,
-//and then demonstrates that it has done so by creating a Rectangle that is the appropriate color.
-
-
-
-//===== Statically-linked libraries =====
-
-//Create a different set of.vcxproj / makefile's that build Shape and one of the DerivedShapes libraries as static libraries (.lib/.a).
-//You should be able to use the same source code.
-//--Create a StaticallyLoadedShapes(.exe) that links to those static libraries.
-//Ensure that your project files / makefiles enforce build order dependency(you should be able to build all with ONE action).
-//Demonstrate that the resulting.exe can be run from anywhere, and does not depend on the existence of the corresponding.lib files.

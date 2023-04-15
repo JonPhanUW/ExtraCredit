@@ -16,3 +16,4 @@ extern "C" {DERIVEDSHAPESLIBRARY_API Rectangles* generateRedRectangle(); }
 extern "C" {DERIVEDSHAPESLIBRARY_API Rectangles* generateBlueRectangle(); }
 
 extern "C" {DERIVEDSHAPESLIBRARY_API int MeaningOfLife(); }
+
