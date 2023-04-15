@@ -1,0 +1,7 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2066,5): warning : The referenced project '..\Shapes\Shapes.vcxproj' does not exist.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2066,5): warning : The referenced project '..\UnitTest\UnitTest.vcxproj' does not exist.
+  pch.cpp
+  DerivedShape.cpp
+  dllmain.cpp
+  Generating Code...
+LINK : fatal error LNK1104: cannot open file 'D:\UW\ExtraCredit\ExtraCredit\x64\Debug\DerivedShapes.dll'

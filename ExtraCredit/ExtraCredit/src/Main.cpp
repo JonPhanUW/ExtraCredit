@@ -6,11 +6,26 @@
 #include "TestHarness.h"
 #include "ProjectCode_API.h"
 #include"DerivedShapes.h"
+//#include "../../DIIA/DerivedShapes/DerivedShapes.h"
+//#include "../../DIIB/DerivedShapes/DerivedShapes.h"
 
 
 int main()
 {
-	
+
+//std::string str = "D:\\UW\\ExtraCredit\\ExtraCredit\\DIIB\\DerivedShapes\\x64\\Debug\\DerivedShapes.dll";
+//std::wstring temp = std::wstring(str.begin(), str.end());
+//LPCWSTR path1 = temp.c_str();
+
+//std::string str2 = "D:\\UW\\ExtraCredit\\ExtraCredit\\DIIB\\DerivedShapes\\x64\\Debug\\DerivedShapes.dll";
+//std::wstring temp2 = std::wstring(str.begin(), str.end());
+//LPCWSTR path2 = temp.c_str();
+
+//HINSTANCE hDll1 = LoadLibrary(path1);
+//HINSTANCE hDll2 = LoadLibrary(path2);
+
+
+//SetDllDirectory(path1);
 
 	TestResult tr;
 	TestRegistry::runAllTests(tr);
@@ -21,7 +36,13 @@ int main()
 	Rectangles* redRectPtr = generateRedRectangle();
 	testStream << redRectPtr->getColor();
 
+	Rectangles* blueRectPtr = generateBlueRectangle();
+	testStream << blueRectPtr->getColor();
+
 	std::cout << testStream.str();
+
+	const int testInt = MeaningOfLife();
+	std::cout << testInt;
 
 }
 
