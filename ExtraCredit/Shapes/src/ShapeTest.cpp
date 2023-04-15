@@ -16,7 +16,7 @@ TEST(drawUnique, Shape)
 	std::stringstream canvas;
 
 	shapes.push_back(std::make_unique<Triangle>(Point(11.1, 22.2), Point(33.3, 44.4), Point(55.5, 66.6), canvas));
-	shapes.push_back(std::make_unique<Rectangle>(Point(11.1, 22.2), Point(33.3, 44.4), canvas));
+	shapes.push_back(std::make_unique<Rectangles>(Point(11.1, 22.2), Point(33.3, 44.4), canvas));
 	shapes.push_back(std::make_unique<Circle>(Point(111.1, 222.2), 333.3, canvas));
 
 	for (const auto& shape : shapes)

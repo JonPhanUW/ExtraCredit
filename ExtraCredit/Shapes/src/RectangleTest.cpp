@@ -5,21 +5,21 @@
 TEST(rectangleTest01, defaultrectangle)
 {
 	std::stringstream testStream;
-	Rectangle rectangleTest;
+	Rectangles rectangleTest;
 	testStream << rectangleTest;
 	CHECK_EQUAL("draw rectangle: 0,0,0,0 ", testStream.str())
 }
 TEST(rectangleTest02, customrectangle)
 {
 	std::stringstream testStream;
-	Rectangle rectangleTest(Point(11.1, 22.2), Point(33.3, 44.4), testStream);
+	Rectangles rectangleTest(Point(11.1, 22.2), Point(33.3, 44.4), testStream);
 	testStream << rectangleTest;
 	CHECK_EQUAL("draw rectangle: 11.1,22.2,33.3,44.4 ", testStream.str())
 }
 TEST(rectangleTest03, streamFuncTest)
 {
 	std::stringstream testStream;
-	Rectangle rectangleTest(Point(11.1, 22.2), Point(33.3, 44.4), testStream);
+	Rectangles rectangleTest(Point(11.1, 22.2), Point(33.3, 44.4), testStream);
 	rectangleTest.stream(testStream);
 	CHECK_EQUAL("draw rectangle: 11.1,22.2,33.3,44.4 ", testStream.str())
 }
@@ -27,7 +27,7 @@ TEST(rectangleTest03, streamFuncTest)
 TEST(rectangleTest04, getFuncTest)
 {
 	std::stringstream testStream;
-	Rectangle rectangleTest(Point(11.1, 22.2), Point(33.3, 44.4), testStream);
+	Rectangles rectangleTest(Point(11.1, 22.2), Point(33.3, 44.4), testStream);
 	Point ptTest1 = rectangleTest.getV1();
 	Point ptTest2 = rectangleTest.getV2();
 	

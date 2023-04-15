@@ -1,8 +1,9 @@
 #pragma once
 
+#include "Shape.h"
 #include <ostream>
 
-class Point
+class  Point
 {
 	
 public:

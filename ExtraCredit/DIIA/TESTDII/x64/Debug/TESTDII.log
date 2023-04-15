@@ -1,0 +1,3 @@
+﻿  DLL_Tutorial.cpp
+D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\DIIA\TESTDII\DLL_Tutorial.cpp(8,14): error C2491: 'Add': definition of dllimport function not allowed
+D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\DIIA\TESTDII\DLL_Tutorial.cpp(13,15): error C2491: 'Function': definition of dllimport function not allowed

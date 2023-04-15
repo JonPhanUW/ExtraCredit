@@ -4,7 +4,7 @@
 #include "Point.h"
 
 
-class Triangle : public Shape
+class  Triangle : public Shape
 {
 public:
 	

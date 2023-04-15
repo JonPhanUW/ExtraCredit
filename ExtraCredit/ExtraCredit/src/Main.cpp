@@ -3,27 +3,30 @@
 #include <memory>
 #include "Shape.h"
 #include "Triangle.h"
+#include "TestHarness.h"
+#include "ProjectCode_API.h"
+#include"DerivedShapes.h"
+
 
 int main()
 {
-	std::cout << "hello world!";
-
-	std::stringstream testStream; 
-	Triangle newTriangle(Point(11.1, 22.2), Point(33.3, 44.4), Point(55.5, 66.6), testStream);
-	newTriangle.stream(testStream);
-	std::cout << testStream.str(); 
-
 	
+
+	TestResult tr;
+	TestRegistry::runAllTests(tr);
+
+
+	std::stringstream testStream;
+
+	Rectangles* redRectPtr = generateRedRectangle();
+	testStream << redRectPtr->getColor();
+
+	std::cout << testStream.str();
+
 }
 
 
 //===== Load - time Dynamic Link Libraries / Shared Libraries =====
-
-//Add the additional capability of a Color member data
-//(what should the public/protected/private protection level be?), and public accessor method.
-
-
-//Provide an `enum class Color`
 
 
 //Ensure that the Shape class's public member functions, and the Color enum, are exported via __declspec(dllexport) when building Shape.dll,

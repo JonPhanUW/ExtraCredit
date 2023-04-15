@@ -3,16 +3,16 @@
 #include "Shape.h"
 #include "Point.h"
 
-class Rectangle : public Shape
+class Rectangles : public Shape
 {
 public:
-	Rectangle(const Point& v1, const Point& v2, std::ostream& canvas)
+	Rectangles(const Point& v1, const Point& v2, std::ostream& canvas)
 		: vertex1(v1), vertex2(v2), myCanvas(&canvas)
 	{
 	}
 
 
-	Rectangle() = default; 
+	Rectangles() = default; 
 
 
 	const Point& getV1() const;

@@ -1,6 +1,5 @@
 ﻿  Circle.cpp
   CircleTest.cpp
-  Failure.cpp
   Main.cpp
   Point.cpp
   PointTest.cpp
@@ -8,11 +7,7 @@ D:\UW\ExtraCredit\ExtraCredit\Shapes\src\PointTest.cpp(25,2): warning C4002: too
   Rectangle.cpp
   RectangleTest.cpp
   ShapeTest.cpp
-  Test.cpp
-  TestRegistry.cpp
-  TestResult.cpp
   Triangle.cpp
   TriangleTest.cpp
-  WFailure.cpp
   Generating Code...
-  Shapes.vcxproj -> D:\UW\ExtraCredit\ExtraCredit\x64\Debug\Shapes.dll
+  Shapes.vcxproj -> D:\UW\ExtraCredit\ExtraCredit\x64\Debug\Shapes.lib
