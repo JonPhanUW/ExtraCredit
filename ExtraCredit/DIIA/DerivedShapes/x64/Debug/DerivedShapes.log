@@ -1,0 +1,11 @@
+﻿  pch.cpp
+  DerivedShape.cpp
+D:\UW\ExtraCredit\ExtraCredit\DIIA\DerivedShapes\DerivedShape.cpp(11,13): warning C4273: 'generateRedRectangle': inconsistent dll linkage
+D:\UW\ExtraCredit\ExtraCredit\DIIA\DerivedShapes\DerivedShapes.h(15,50): message : see previous definition of 'generateRedRectangle'
+D:\UW\ExtraCredit\ExtraCredit\DIIA\DerivedShapes\DerivedShape.cpp(20,5): warning C4273: 'MeaningOfLife': inconsistent dll linkage
+D:\UW\ExtraCredit\ExtraCredit\DIIA\DerivedShapes\DerivedShapes.h(18,42): message : see previous definition of 'MeaningOfLife'
+  dllmain.cpp
+  Generating Code...
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1391,5): warning MSB8012: TargetPath(D:\UW\ExtraCredit\ExtraCredit\x64\Debug\DerivedShapes.dll) does not match the Linker's OutputFile property value (D:\UW\ExtraCredit\ExtraCredit\DLL_A\DerivedShapes.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     Creating library D:\UW\ExtraCredit\ExtraCredit\x64\Debug\DerivedShapes.lib and object D:\UW\ExtraCredit\ExtraCredit\x64\Debug\DerivedShapes.exp
+  DerivedShapes.vcxproj -> D:\UW\ExtraCredit\ExtraCredit\x64\Debug\DerivedShapes.dll
