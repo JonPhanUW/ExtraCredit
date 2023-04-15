@@ -102,13 +102,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Shapes\src;$(SolutionDir)UnitTest\src;$(SolutionDir)DerivedShapes;$(SolutionDir)Shapes\x64\Debug;$(SolutionDir)DerivedShapes\x64\Debug;$(SolutionDir)DerivedShapes\x64\StaticallyLoadedShapes;#(SolutionDir)ExtraCredit\x64\StaticallyLoadedShapes</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Shapes\src;$(SolutionDir)UnitTest\src;$(SolutionDir)DIIA\DerivedShapes;$(SolutionDir)DIIB\DerivedShapes;$(SolutionDir)DLL_A;$(SolutionDir)DLL_B</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>%(AdditionalDependencies);DerivedShapes.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\DerivedShapes\x64\StaticallyLoadedShapes;..\..\Shapes\x64\StaticallyLoadedShapes;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\DerivedShapes\x64\Debug;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\Shapes\x64\Debug;D:\UW\ExtraCredit\ExtraCredit\x64\StaticallyLoadedShapes;D:\UW\ExtraCredit\ExtraCredit\DerivedShapes\x64\StaticallyLoadedShapes;$(SolutionDir)ExtraCredit\x64\StaticallyLoadedShapes;$(SolutionDir)ExtraCredit\DerivedShapes\x64\StaticallyLoadedShapes;$(SolutionDir)x64\StaticallyLoadedShapes;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);DerivedShapes.dll</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)DLL_A;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -152,13 +152,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Shapes\src;$(SolutionDir)UnitTest\src;$(SolutionDir)DerivedShapes;$(SolutionDir)Shapes\x64\Debug;$(SolutionDir)DerivedShapes\x64\Debug;$(SolutionDir)DerivedShapes\x64\StaticallyLoadedShapes;#(SolutionDir)ExtraCredit\x64\StaticallyLoadedShapes</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Shapes\src;$(SolutionDir)UnitTest\src;$(SolutionDir)DIIA\DerivedShapes;$(SolutionDir)DIIB\DerivedShapes;$(SolutionDir)DLL_A;$(SolutionDir)DLL_B</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>%(AdditionalDependencies);DerivedShapes.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\DerivedShapes\x64\StaticallyLoadedShapes;..\..\Shapes\x64\StaticallyLoadedShapes;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\DerivedShapes\x64\Debug;D:\UW\assignment-extra-credit-JonPhanUW\ExtraCredit\Shapes\x64\Debug;D:\UW\ExtraCredit\ExtraCredit\x64\StaticallyLoadedShapes;D:\UW\ExtraCredit\ExtraCredit\DerivedShapes\x64\StaticallyLoadedShapes;$(SolutionDir)ExtraCredit\x64\StaticallyLoadedShapes;$(SolutionDir)ExtraCredit\DerivedShapes\x64\StaticallyLoadedShapes;$(SolutionDir)x64\StaticallyLoadedShapes;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);DerivedShapes.dll</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)DLL_A;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -220,9 +220,6 @@
     <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DerivedShapes\DerivedShapes.vcxproj">
-      <Project>{affbdcd9-8558-4cc7-aa4f-4c11843e6056}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\Shapes\Shapes.vcxproj">
       <Project>{110c0f5e-467f-4ba0-8f37-5e0e92868c6d}</Project>
     </ProjectReference>

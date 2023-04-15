@@ -11,7 +11,7 @@
 //#include "../../DIIA/DerivedShapes/DerivedShapes.h"
 //#include "../../DIIB/DerivedShapes/DerivedShapes.h"
 
-typedef int(__cdecl* MYPROC)(LPCWSTR);
+//typedef int(__cdecl* MYPROC)(LPCWSTR);
 
 int main()
 {
@@ -30,11 +30,11 @@ int main()
 
 //SetDllDirectory(path1);
 
-	TestResult tr;
-	TestRegistry::runAllTests(tr);
+	//TestResult tr;
+	//TestRegistry::runAllTests(tr);
 
-	char test; 
-	std::cin >> test; 
+	//char test; 
+	//std::cin >> test; 
 
 	//HINSTANCE dsLib;
 	//MYPROC ProcAdd;

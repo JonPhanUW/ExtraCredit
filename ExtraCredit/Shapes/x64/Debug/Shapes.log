@@ -1,1 +1,13 @@
-﻿  Shapes.vcxproj -> D:\UW\ExtraCredit\ExtraCredit\x64\Debug\Shapes.lib
+﻿  Circle.cpp
+  CircleTest.cpp
+  Main.cpp
+  Point.cpp
+  PointTest.cpp
+D:\UW\ExtraCredit\ExtraCredit\Shapes\src\PointTest.cpp(25,2): warning C4002: too many arguments for function-like macro invocation 'CHECK_EQUAL'
+  Rectangle.cpp
+  RectangleTest.cpp
+  ShapeTest.cpp
+  Triangle.cpp
+  TriangleTest.cpp
+  Generating Code...
+  Shapes.vcxproj -> D:\UW\ExtraCredit\ExtraCredit\x64\Debug\Shapes.lib

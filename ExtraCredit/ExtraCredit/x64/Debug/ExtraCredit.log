@@ -1,2 +1,1 @@
-﻿  Main.cpp
-  ExtraCredit.vcxproj -> D:\UW\ExtraCredit\ExtraCredit\x64\Debug\ExtraCredit.exe
+﻿D:\UW\ExtraCredit\ExtraCredit\DLL_A\DerivedShapes.dll : fatal error LNK1107: invalid or corrupt file: cannot read at 0x388
